@@ -1,9 +1,19 @@
 plugins {
-    id("java")
+    application
 }
 
 group = "org.labs"
 version = "1.0-SNAPSHOT"
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = "org.labs.Main"
+}
 
 repositories {
     mavenCentral()
